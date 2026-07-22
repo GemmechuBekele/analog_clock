@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wall Clock</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    />
+</head>
+<body class="bg-[#DBCDC5]">
+    <div class="flex flex-col items-center min-h-screen gap-10 mt-20">
+        <div>
+            <button id="sound-btn"
+            >
+            <i class="fa-solid fa-volume-high bg-blue-200 py-2 px-3"></i>
+            </button>
+        </div>
+        <div id="clock"
+        class="relative w-96 h-96 rounded-full bg-[#F7F2E8] border-2 border-green-200 shadow-2xl"
+        >
+            <div>
+                <!-- Numbers -->
+                <span class="absolute left-1/2 -translate-x-1/2 top-3 text-3xl">12</span>
+                <span class="absolute text-3xl top-[12%] right-[26%]">1</span>
+                <span class="absolute text-3xl top-[24%] right-[11%]">2</span>
+                <span class="absolute text-3xl top-1/2 right-4 -translate-y-1/2">3</span>
+                <span class="absolute text-3xl bottom-[23%] right-[13%]">4</span>
+                <span class="absolute text-3xl bottom-[11%] right-[28%]">5</span>
+                <span class="absolute text-3xl left-1/2 -translate-x-1/2 bottom-3">6</span>
+                <span class="absolute text-3xl bottom-[11%] left-[28%]">7</span>
+                <span class="absolute text-3xl bottom-[23%] left-[13%]">8</span>
+                <span class="absolute text-3xl top-1/2 left-4 -translate-y-1/2">9</span>
+                <span class="absolute text-3xl top-[24%] left-[11%]">10</span>
+                <span class="absolute text-3xl top-[12%] left-[24%]">11</span>
+            </div>
+
+            <!-- Brands -->
+            <p class="absolute top-[38%] left-1/2 text-[10px] -translate-x-1/2 tracking-[1.5px] font-bold text-gray-600">
+                Gemmechu
+            </p>
+
+            <!-- Hands -->
+            <div id="hour"
+            class="absolute bottom-1/2 left-1/2 w-2 h-20 bg-slate-800 rounded-full origin-bottom -translate-x-1/2"
+            >
+
+            </div>
+
+            <div id="minute"
+            class="absolute bottom-1/2 left-1/2 w-1 h-28 bg-slate-600 origin-bottom -translate-x-1/2 rounded-2xl"
+            >
+
+            </div>
+
+            <div id="second"
+            class="absolute bottom-1/2 left-1/2 w-[2px] h-32 bg-red-500 origin-bottom -translate-x-1/2 rounded-2xl"
+            >
+
+            </div>
+
+            <!-- Dots -->
+            <div id="dots"
+            class="absolute w-4 h-4 bg-black rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <script src="./script.js"></script>
+</body>
+</html>
